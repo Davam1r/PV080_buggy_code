@@ -48,10 +48,10 @@ def authenticate(password):
 
 if __name__ == '__main__':
     print("Vulnerabilities:")
-    print("1. Format string vulnerability:")
-    print("2. Code injection vulnerability:")
+    print("1. Format string vulnerability:")  # use input - "{person.__init__.__globals__[CONFIG][API_KEY]}"
+    print("2. Code injection vulnerability:") # input - "3;print('Own code executed') #"
     print("3. Yaml deserialization vulnerability:")
-    print("4. Use of assert statements vulnerability:")
+    print("4. Use of assert statements vulnerability:") # run the script with "-O" optimization option
     choice  = input("Select vulnerability: ")
     if choice == "1": 
         new_person = Person("Vickie")  
